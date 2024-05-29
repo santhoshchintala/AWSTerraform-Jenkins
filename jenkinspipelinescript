@@ -1,0 +1,37 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage('Checkout') {
+            steps {
+                git branch: 'main', url: 'https://github.com/santhoshchintala/AWSTerraform-Jenkins'
+            }
+        }
+        stage('List Workspace') {
+            steps {
+                sh 'ls -la'
+            }
+        }
+        stage('Terraform Init') {
+            steps {
+                dir('modules') {
+                    sh 'terraform init'
+                }
+            }
+        }
+        stage('Terraform Plan') {
+            steps {
+                dir('modules') {
+                    sh 'terraform plan'
+                }
+            }
+        }
+        stage('Terraform Apply') {
+            steps {
+                dir('modules') {
+                    sh 'terraform apply -auto-approve'
+                }
+            }
+        }
+    }
+}

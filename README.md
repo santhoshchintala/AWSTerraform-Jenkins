@@ -28,6 +28,8 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
   3. The Jenkins installation script directs you to the Customize Jenkins page. Click Install suggested plugins
   4. Once the installation is complete, the Create First Admin User will open. Enter your information, and then select Save and Continue.
 
+Note -  you might see error "diskspace threshold" -->configure-->disk space monitoing threshold-->make it 0mb in all 
+
 ##Install Terraform plugin on jenkins
   1. Once the installation is complete and administrator login is enabled, click on “Manage Jenkins” in the left navigation menu
   2. Next, click on the “Manage Plugins” icon to install the Terraform plugin

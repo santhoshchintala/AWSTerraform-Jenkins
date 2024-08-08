@@ -45,3 +45,5 @@ Note -  you might see error "diskspace threshold" -->configure-->disk space moni
      [Pipelien Script]:https://github.com/santhoshchintala/AWSTerraform-Jenkins/blob/main/jenkinspipelinescript
   5. Replace your Github url and folder which is in github.
 
+##Create IAM Role for access
+    1.create ec2-admin - iam role and attach to ec2 instance
